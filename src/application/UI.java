@@ -1,11 +1,9 @@
 package application;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import chess.ChessMatch;
@@ -58,6 +56,7 @@ public class UI {
 		System.out.println();
 		System.out.println("Turn: " + chessMatch.getTurn());
 		System.out.println("Wating player: " + chessMatch.getCurrentPlayer());
+		if(chessMatch.getCheck()) System.out.println("CHECK!");
 	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {
